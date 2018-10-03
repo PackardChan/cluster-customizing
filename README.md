@@ -33,10 +33,10 @@ HostName %h.ib0
 
 ## My Odyssey login practice
 1. Download [openauth](https://www.rc.fas.harvard.edu/resources/documentation/openauth/) on local computer (NOT phone).
-2. Put openauth in startup. Windows user: use steps below. Mac user: invent your own way.
-  1. In `File Explorer`, simply type `startup` in path line. This will bring you to `C:\Users\some_user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`.
-  2. From downloaded zip file of openauth, copy `*-openauth.bat` into startup folder.
-  3. Correct `*-openauth.bat` with absolute path of `JAuth.jar`, e.g. `start javaw -jar C:\Users\some_user\Desktop\JAuth.jar`.
+2. Put openauth in startup. Windows user: use steps below. Mac user: invent your way and tell me.
+   1. In `File Explorer`, simply type `startup` in path line. This will bring you to `C:\Users\some_user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`.
+   2. From downloaded zip file of openauth, copy `*-openauth.bat` into startup folder.
+   3. Correct `*-openauth.bat` with absolute path of `JAuth.jar`, e.g. `start javaw -jar C:\Users\some_user\Desktop\JAuth.jar`.
 3. Connect **RC** VPN at `vpn.rc.fas.harvard.edu` with username like `pchan@odyssey`.
 4. Login to rcnx01 (remember password for NoMachine and XShell, or ssh-copy-id).
 5. Every time after monthly maintenance, `ssh -CY -o ServerAliveInterval=30 -fN rclogin14`.
