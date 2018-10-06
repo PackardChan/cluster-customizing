@@ -46,11 +46,11 @@ HostName %h.ib0
 7. `ssh -Y rclogin14`
 
 ## File transfer
-I like lrzsz (ZModem) for file transfer (no need to switch to another terminal/program!).
-Mac user: follow this [link](https://gist.github.com/meowoodie/4bcf6d6ae81727b618bf) to set up.
-Windows user: use XShell - [Home/School Free Version available](https://www.netsarang.com/download/free_license.html), or [other clients that support ZModem](https://en.wikipedia.org/wiki/Comparison_of_SSH_clients#Features).
-After that, download [sz and rz](share/bin/) and put under `~/bin/` (this is usually in your path by default).
-Now, you can run `sz some_file` to download and `rz` to upload.
+I like lrzsz (ZModem) for file transfer (no need to switch to another terminal/program!). \
+Mac user: follow this [link](https://gist.github.com/meowoodie/4bcf6d6ae81727b618bf) to set up. \
+Windows user: use XShell - [Home/School Free Version available](https://www.netsarang.com/download/free_license.html), or [other clients that support ZModem](https://en.wikipedia.org/wiki/Comparison_of_SSH_clients#Features). \
+After that, download [sz and rz](share/bin/) and put under `~/bin/` (this is usually in your path by default). \
+Now, you can run `sz some_file` to download and `rz` to upload. \
 If ZModem did not work for you, see [RC page](https://www.rc.fas.harvard.edu/resources/odyssey-quickstart-guide/#Transfer_any_files_you_may_need) for more options.
 
 ## Mounting storage
