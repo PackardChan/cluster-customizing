@@ -51,12 +51,12 @@ I like lrzsz (ZModem) for small file transfer (no need to switch to another term
 Mac user: follow this [link](https://gist.github.com/meowoodie/4bcf6d6ae81727b618bf) to set up. \
 Windows user: use XShell - [Home/School Free Version available](https://www.netsarang.com/download/free_license.html), or [other clients that support ZModem](https://en.wikipedia.org/wiki/Comparison_of_SSH_clients#Features). \
 After that, download [sz and rz](share/bin/) and put under `~/bin/` (this is usually in your path by default). \
-Now, you can run `sz some_file` to download and `rz` to upload. \
+Now, you can run `sz some_file` to download and `rz` to upload.
 
 ## File transfer - other
  * Odyssey Home directory and Lab storage can be mounted on your local computer. ([link](https://www.rc.fas.harvard.edu/resources/documentation/mounting-storage/))
  * [Dropbox synchronizing](https://www.dropboxwiki.com/tips-and-tricks/using-the-official-dropbox-command-line-interface-cli). Try get [Harvard-funded Dropbox](https://wiki.harvard.edu/confluence/display/USERDOCS/SEAS+Dropbox+eligibility+table).
- * Large file transfer with Globus ([Cheyenne](https://www2.cisl.ucar.edu/resources/storage-and-file-systems/globus-file-transfers), [Odyssey](https://www.rc.fas.harvard.edu/globus-file-transfer/)).
+ * Large file transfer with Globus (link: [Cheyenne](https://www2.cisl.ucar.edu/resources/storage-and-file-systems/globus-file-transfers), [Odyssey](https://www.rc.fas.harvard.edu/globus-file-transfer/)).
  * More options on [RC page](https://www.rc.fas.harvard.edu/resources/odyssey-quickstart-guide/#Transfer_any_files_you_may_need).
 
 ## .inputrc (history-search-backward)
