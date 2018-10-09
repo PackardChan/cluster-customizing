@@ -10,7 +10,8 @@ Files in [share](share/) are for all machine (local, odyssey and cheyenne).
 ```
 ssh -CY -o ServerAliveInterval=30 -fN ody
 ```
-After this, you are **still in local machine**, but you can see a token named like `~/.ssh/pchan@login.rc.fas.harvard.edu:22-localhost.localdomain` \
+After this, you are **still in local machine**, but you can see a token named like `~/.ssh/pchan@login.rc.fas.harvard.edu:22-localhost.localdomain`
+
 3. When token exists, use `ody` to replace `username@address`, e.g.:
 ```
 ssh -Y ody
@@ -33,6 +34,12 @@ HostName %h.ib0
 ```
 
 ## NoMachine for Odyssey
+ * Can disconnect and reconnect without losing your session.
+ * Faster graphic forwarding than [X11](https://www.rc.fas.harvard.edu/resources/documentation/x11-forwarding/).
+1. Avoid loading modules in bashrc.
+1. Follow instructions on [RC page](https://www.rc.fas.harvard.edu/resources/documentation/nx-nomachine/).
+1. I suggest saving password, and GNOME desktop in the connection file.
+1. <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>0</kbd>, click `Display`, turn on `Resize remote screen`.
 
 ## My Odyssey login practice
 1. Download [openauth](https://www.rc.fas.harvard.edu/resources/documentation/openauth/) on local computer (NOT phone).
