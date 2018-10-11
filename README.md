@@ -4,20 +4,24 @@ Describes how I customize my accounts in computer clusters, with some specific a
 Files in [local](local/) are for your local computer, or any other cluster. \
 Files in [share](share/) are for all machine (local, odyssey and cheyenne).
 
-## .ssh/config (Single sign on)
-1. Download corresponding .ssh/config to your local/remote machine.
-2. Create a token (password required):
+## .ssh/config (Single sign on, for Mac or other Linux-like systems)
+[SSH ControlMaster](https://www.rc.fas.harvard.edu/resources/documentation/linux/using-ssh-controlmaster-for-single-sign-on/) allows you to sign on once and reuse it. You must go from same source node to same destination node.
+1. On source node, download corresponding .ssh/config, and change pchan to your username on destination node. In the example below, I have defined a nickname `ody`. I have appended ControlPath with -%l so that different source nodes on same file system will not interfere.
 ```
-ssh -CY -o ServerAliveInterval=30 -fN ody
+Host ody
+User pchan
+HostName login.rc.fas.harvard.edu
+ControlMaster auto
+ControlPath ~/.ssh/%r@%h:%p-%l
 ```
-After this, you are **still in local machine**, but you can see a token named like `~/.ssh/pchan@login.rc.fas.harvard.edu:22-localhost.localdomain`
+2. On source node, run `ssh -CY -o ServerAliveInterval=30 -fN ody` to create a token (password required). This step prints nothing to screen and you are **still on source node**, but you can see a token named like `~/.ssh/pchan@login.rc.fas.harvard.edu:22-localhost.localdomain`.
 
-3. When token exists, use `ody` to replace `username@address`, e.g.:
+3. When token exists and is open, use nickname `ody` to replace `username@address` (example below). **Stop and redo step 2** if you are asked for password.
 ```
 ssh -Y ody
 rsync ody:~/some_file ~/  # file transfer
+sftp ody
 ```
-https://www.rc.fas.harvard.edu/resources/documentation/linux/using-ssh-controlmaster-for-single-sign-on/
 
 ## No password sign on (with publickey)
 ```
@@ -40,6 +44,8 @@ HostName %h.ib0
 1. Follow instructions on [RC page](https://www.rc.fas.harvard.edu/resources/documentation/nx-nomachine/).
 1. I suggest saving password, and GNOME desktop in the connection file.
 1. <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>0</kbd>, click `Display`, turn on `Resize remote screen`.
+1. From top-left corner, click `Applications` > `System Tools` > `Terminal` to open a new terminal.
+ * Some keyboard shortcuts may not work. I use right click to copy and paste.
 
 ## My Odyssey login practice
 1. Download [openauth](https://www.rc.fas.harvard.edu/resources/documentation/openauth/) on local computer (NOT phone).
