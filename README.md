@@ -1,5 +1,5 @@
 # cluster-customizing
-Describes how I customize my accounts in computer clusters, with some specific advice for Harvard Odyssey and NCAR Cheyenne.
+Describes how I customize my accounts in computer clusters, with some specific tips for Harvard Odyssey and NCAR Cheyenne.
 
 Files in [local](local/) are for your local computer, or any other cluster. \
 Files in [share](share/) are for all machine (local, odyssey and cheyenne).
@@ -69,10 +69,17 @@ Now, you can run `sz some_file` to download and `rz` to upload.
 ## File transfer - other
  * Odyssey Home directory and Lab storage can be mounted on your local computer. ([link](https://www.rc.fas.harvard.edu/resources/documentation/mounting-storage/))
  * [Dropbox synchronizing](https://www.dropboxwiki.com/tips-and-tricks/using-the-official-dropbox-command-line-interface-cli). Try get [Harvard-funded Dropbox](https://wiki.harvard.edu/confluence/display/USERDOCS/SEAS+Dropbox+eligibility+table).
+ * GitHub - [free student pack available](https://help.github.com/articles/applying-for-a-student-developer-pack/).
  * Large file transfer with Globus (link: [Cheyenne](https://www2.cisl.ucar.edu/resources/storage-and-file-systems/globus-file-transfers), [Odyssey](https://www.rc.fas.harvard.edu/globus-file-transfer/)).
  * More options on [RC page](https://www.rc.fas.harvard.edu/resources/odyssey-quickstart-guide/#Transfer_any_files_you_may_need).
 
 ## .inputrc (history-search-backward)
+Bottons (e.g. <kbd>PageUp</kbd> or <kbd>&uparrow;</kbd>) can be bound to action `history-search-backward`, so no need to memorize and type historical commands. In bash, this can be done by inputrc (defaults in /etc/inputrc).
+1. (Usu. Windows) If there is <kbd>PageUp</kbd> on your keyboard and it can go to remote server, you can download [.inputrc.less](share/.inputrc.less) and move to `~/.inputrc`.
+1. If not (usu. Mac), you can download [.inputrc.more](share/.inputrc.more) and move to `~/.inputrc`. This will bind <kbd>&uparrow;</kbd> to `history-search-backward`, instead of `previous-history`.
+1. For the first time, sign out and sign in, or `bind -f ~/.inputrc` to load the new inputrc.
+1. Now when you type `cd`<kbd>PageUp</kbd>, or `ss`<kbd>PageUp</kbd>, you will be able to use <kbd>PageUp</kbd> and <kbd>PageDn</kbd> to search historical commands. Use <kbd>&uparrow;</kbd> and <kbd>&downarrow;</kbd> instead if you used .inputrc.more. Use <kbd>Ctrl</kbd><kbd>c</kbd> to stop searching.
+1. You might also want to do `export HISTSIZE=9999` and `export HISTCONTROL=ignoredups` in your .bashrc to store more histories.
 
 ## .vim .vimrc
 
