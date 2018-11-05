@@ -9,10 +9,10 @@ Files in [share](share/) are for all machine (local, odyssey and cheyenne).
 1. On source node, download corresponding .ssh/config, and change pchan to your username on destination node. In the example below, I have defined a nickname `ody`. I have appended ControlPath with -%l so that different source nodes on same file system will not interfere.
 ```
 Host ody
-User pchan
-HostName login.rc.fas.harvard.edu
-ControlMaster auto
-ControlPath ~/.ssh/%r@%h:%p-%l
+  User pchan
+  HostName login.rc.fas.harvard.edu
+  ControlMaster auto
+  ControlPath ~/.ssh/%r@%h:%p-%l
 ```
 2. On source node, run `ssh -CY -o ServerAliveInterval=30 -fN ody` to create a token (password required). This step prints nothing to screen and you are **still on source node**, but you can see a token named like `~/.ssh/pchan@login.rc.fas.harvard.edu:22-localhost.localdomain`.
 
@@ -34,7 +34,7 @@ https://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-passwo
 Cheyenne only, across various cheyenne login nodes.
 ```
 Host cheyenne?
-HostName %h.ib0
+  HostName %h.ib0
 ```
 
 ## NoMachine for Odyssey
